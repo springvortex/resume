@@ -1,0 +1,7 @@
+subject: 编程语言
+listing-order: 5
+icon: "/assets/img/globe.svg"
+contents:
+  - title: "java: <span style='color: goldenrod; margin: auto 8px; font-family: cursive;'>●●●●●</span>"
+  - title: "vue: <span style='color: cornflowerblue; margin: auto 8px; font-family: cursive;'>●●●◐○</span>"
+  - title: "python: <span style='color: indianred; margin: auto 8px; font-family: cursive;'>●●●○○</span>"

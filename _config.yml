@@ -1,0 +1,22 @@
+title: 钟健材
+profile_img: /assets/img/zjc.jpg
+icon_img: /assets/img/favicon.ico
+
+name: "钟健材"
+job: "JAVA 研发工程师"
+
+# phone_number: 155 0753 0622
+# address: 广东·广州
+# email: jiancai.zhong@email.cn
+
+baseurl: /resume
+
+exclude:
+  - _posts/
+  - resources/
+  - vendor/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
