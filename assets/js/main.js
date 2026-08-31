@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     const tocbox = document.querySelector('.toc-box');
-    var headers = document.querySelectorAll('.subject-name');
+    const headers = document.querySelectorAll('.subject-name');
 
     headers.forEach((h) => {
         let tocItem = document.createElement("li");
@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', function(){
         tocbox.append(tocItem);
     });
 
-    var contents = document.querySelectorAll('.subject, .item');
+    const contents = document.querySelectorAll('.subject, .item');
 
     // Reveal content as it scrolls into view using IntersectionObserver
     if ('IntersectionObserver' in window) {
-        var appearObserver = new IntersectionObserver(function(entries) {
+        const appearObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('appear');
@@ -46,10 +46,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // Highlight active TOC item using IntersectionObserver on headers
     if ('IntersectionObserver' in window && tocbox.children.length > 0) {
-        var tocItems = Array.from(tocbox.querySelectorAll('li'));
-        var headerObserver = new IntersectionObserver(function(entries) {
+        const tocItems = Array.from(tocbox.querySelectorAll('li'));
+        const headerObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
-                var tocLink = document.getElementById("toc-id-" + entry.target.textContent);
+                let tocLink = document.getElementById("toc-id-" + entry.target.textContent);
                 if (!tocLink) return;
                 if (entry.isIntersecting) {
                     tocItems.forEach(function(t) { t.classList.remove('active'); });
