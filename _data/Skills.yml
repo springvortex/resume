@@ -2,11 +2,12 @@ subject: 专业技能
 listing-order: 2
 icon: "/assets/img/screwdriver-wrench.svg"
 contents:
-  - title: 
+  - title:
     description:
       - 核心技术：精通 Java 后端开发，熟练掌握并发编程、JVM 调优、多线程/异步任务、常用数据结构与算法
-      - 框架体系：熟练使用 SpringBoot、SpringMVC、MyBatis/MyBatis-Plus，具备微服务架构设计与迭代能力
-      - 数据存储：精通 MySQL、PostgreSQL、HGDB 熟练 SQL 优化、分区分表、索引优化、大数据量导入处理,熟练Redis 缓存架构、布隆过滤器、分布式缓存、高并发限流方案
-      - 中间件与部署：熟悉 MQ 消息队列、流量削峰、异步解耦；熟练 Linux 环境部署、服务搭建、OSS 对象存储
-      - 工程与业务：熟练 Git、接口文档编写、需求分析、数据建模、支付对接、权限体系、工作流引擎实战经验
+      - 框架体系：熟练使用 Spring Boot、Spring MVC、MyBatis/MyBatis-Plus，具备微服务架构设计与迭代能力
+      - 数据存储：精通 MySQL、PostgreSQL、HGDB，熟练 SQL 优化、分区分表、索引优化、大数据量导入处理；熟练 Redis 缓存架构、布隆过滤器、分布式缓存、高并发限流方案
+      - 中间件与部署：熟悉 MQ 消息队列、流量削峰、异步解耦；熟练 Linux 环境部署、服务搭建、组件源码编译、OSS 对象存储
+      - 工程与业务：熟练 Git、接口文档编写、需求分析、CI/CD、Docker；具备微信小程序全流程开发、支付对接、权限体系、工作流引擎实战经验
       - 高并发能力：具备秒杀、缓存防击穿、流量削峰、大数据量导入、分布式场景实战经验
+      - AI Agent：熟练使用 Codex、Claude Code 等 AI Agent 工具辅助需求分析、代码生成、单元测试、代码审查与问题排查，将 AI 编程能力融入日常研发流程，显著提升开发与交付效率

@@ -45,8 +45,16 @@ meta = meta | push:yml_file[1] %} {% endfor %} {% assign meta = meta | sort:
             <img src="{{ '/assets/img/envelope.svg' | prepend: site.baseurl }}" alt="My Email" />
             <div><span>{{ site.email }}</span></div>
           </a>
-        </li>
-        {% endif %}
+       </li>
+       {% endif %}
+       {% if site.github_url %}
+       <li>
+         <a aria-label="My GitHub" href="{{ site.github_url }}" target="_blank">
+           <img src="{{ '/assets/img/github.svg' | prepend: site.baseurl }}" alt="My GitHub" />
+           <div><span>GitHub</span></div>
+         </a>
+       </li>
+       {% endif %}
       </ul>
     </div>
     <div class="name-zone">

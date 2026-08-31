@@ -2,10 +2,8 @@ subject: 个人简介
 listing-order: 1
 icon: "/assets/img/graduation-cap.svg"
 contents:
-  - title: 肇庆学院·数据科学与大数据技术
+  - title: 肇庆学院 - 本科 - 数据科学与大数据技术
     description:
-      - 工作年限：Java 后端开发经验
-      - 求职意向：Java后端开发、全栈侧重后端
-      - 手机号码：<a href="tel:15507530622">155 0753 0622</a>
-      - 电子邮箱：<a href="mailto:jiancai.zhong@email.cn">jiancai.zhong@email.cn</a>
+      - 工作年限：4.5 年 Java 后端开发经验
+      - 求职意向：Java 后端开发、全栈侧重后端
     date: 2018.09 - 2022.06
