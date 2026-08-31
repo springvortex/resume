@@ -5,10 +5,10 @@ icon_img: /assets/img/favicon.ico
 name: "钟健材"
 job: "JAVA 研发工程师"
 
-phone_number: 155 0753 0622
+#phone_number: 155 0753 0622
 # address: 广东·广州
-email: jiancai.zhong.1997@gmail.com
-github_url: https://github.com/springvortex
+#email: jiancai.zhong.1997@gmail.com
+#github_url: https://github.com/springvortex
 
 baseurl: /resume
 
