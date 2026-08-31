@@ -23,35 +23,43 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var contents = document.querySelectorAll('.subject, .item');
 
-    setInterval(function(){
-        var scrollPos = document.documentElement.scrollTop;
-        var wh = window.innerHeight;
+    // Reveal content as it scrolls into view using IntersectionObserver
+    if ('IntersectionObserver' in window) {
+        var appearObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    appearObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -10% 0px' });
 
-        Array.from(tocbox.querySelectorAll('li')).forEach(function(tocItem){
-            tocItem.classList.remove('active');
+        contents.forEach(function(c) {
+            appearObserver.observe(c);
         });
-
-        var currHead;
-
-        Array.from(headers).forEach(function(h){
-            let headPos = h.getBoundingClientRect().top + window.scrollY - wh/2;
-
-            if (scrollPos > headPos) currHead = h;
-        });
-
-        Array.from(contents).forEach(function(c){
-            let contentPos = c.getBoundingClientRect().top + window.scrollY - wh;
-
-            if (c.classList.contains("appear")) return;
-
-            if (scrollPos < contentPos) return;
-
+    } else {
+        // Fallback: reveal all immediately
+        contents.forEach(function(c) {
             c.classList.add('appear');
         });
+    }
 
-        if (currHead != undefined){
-            let tocLink = document.getElementById("toc-id-" + currHead.textContent);
-            tocLink.classList.add('active');
-        }
-    }, 200);
+    // Highlight active TOC item using IntersectionObserver on headers
+    if ('IntersectionObserver' in window && tocbox.children.length > 0) {
+        var tocItems = Array.from(tocbox.querySelectorAll('li'));
+        var headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var tocLink = document.getElementById("toc-id-" + entry.target.textContent);
+                if (!tocLink) return;
+                if (entry.isIntersecting) {
+                    tocItems.forEach(function(t) { t.classList.remove('active'); });
+                    tocLink.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+
+        headers.forEach(function(h) {
+            headerObserver.observe(h);
+        });
+    }
 });
